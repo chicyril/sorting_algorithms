@@ -39,7 +39,7 @@ void partition(int *array, int size, int lb, int ub)
 				swap(array, size, si, step);
 		}
 	}
-	if (si + 1 < ub)
+	if ((si + 1 < ub) && (array[si + 1] != array[ub]))
 		swap(array, size, si + 1, ub);
 	partition(array, size, lb, si);
 	partition(array, size, si + 2, ub);
